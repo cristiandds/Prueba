@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ricos Burger — Las mejores hamburguesas de la ciudad. Pedí online." />
+  <title>Ricos Burger — Hamburguesas artesanales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header" id="inicio">
+    <div class="header__inner container">
+      <a href="#inicio" class="logo" aria-label="Ricos Burger inicio">
+        <span class="logo__icon" aria-hidden="true">🍔</span>
+        <span class="logo__text">Ricos <span>Burger</span></span>
+      </a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="mainNav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#menu" class="nav__link">Menú</a></li>
+          <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="cart-btn" id="cartBtn" aria-label="Abrir carrito de compras">
+        <svg class="cart-btn__icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="cart-btn__count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__content container">
+        <p class="hero__badge">Desde 2026 · 100% carne premium</p>
+        <h1 class="hero__title">Las mejores hamburguesas de la ciudad de Cajamarca</h1>
+        <p class="hero__text">Carne jugosa, pan recién horneado y salsas caseras. Pedí tu favorita y disfrutá el sabor Ricos Burger.</p>
+        <div class="hero__actions">
+          <a href="#menu" class="btn btn--primary">Ver menú</a>
+          <a href="#contacto" class="btn btn--outline">Contacto</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-head__title">Nuestro menú</h2>
+          <p class="section-head__subtitle">Elegí tu burger y agregala al carrito en un clic</p>
+        </header>
+
+        <div class="filters" role="group" aria-label="Filtrar por tipo">
+          <button type="button" class="filter-btn is-active" data-filter="todas">Todas</button>
+          <button type="button" class="filter-btn" data-filter="clasica">Clásicas</button>
+          <button type="button" class="filter-btn" data-filter="premium">Premium</button>
+          <button type="button" class="filter-btn" data-filter="picante">Picantes</button>
+          <button type="button" class="filter-btn" data-filter="vegetariana">Vegetarianas</button>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
+
+    <section class="about" id="nosotros">
+      <div class="container about__grid">
+        <div class="about__visual">
+          <div class="about__card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Equipo preparando hamburguesas en cocina" loading="lazy" width="600" height="400" />
+          </div>
+        </div>
+        <div class="about__text">
+          <h2 class="section-head__title section-head__title--left">Nosotros</h2>
+          <p class="about__lead">En <strong>Ricos Burger</strong> creemos que una buena hamburguesa no es casualidad: es ingredientes de calidad, pasión y atención al detalle.</p>
+          <p>Nacimos como un emprendimiento familiar y hoy seguimos cocinando cada pedido con el mismo cariño del primer día. Usamos carne 100% vacuna, pan artesanal y vegetales frescos todos los días.</p>
+          <ul class="about__list">
+            <li>Carne premium seleccionada</li>
+            <li>Pan horneado en el día</li>
+            <li>Salsas y aderezos caseros</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-head__title">Contacto</h2>
+          <p class="section-head__subtitle">Estamos para lo que necesites</p>
+        </header>
+        <div class="contact__grid">
+          <div class="contact__card">
+            <h3>Ubicación</h3>
+            <p>Av. Corrientes 1234, CABA<br />Buenos Aires, Argentina</p>
+          </div>
+          <div class="contact__card">
+            <h3>Teléfono & WhatsApp</h3>
+            <p><a href="tel:+541123456789">+54 11 2345-6789</a></p>
+          </div>
+          <div class="contact__card">
+            <h3>Horario</h3>
+            <p>Lun — Dom: 12:00 a 23:30 hs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <span class="logo logo--footer"><span class="logo__icon">🍔</span> Ricos Burger</span>
+        <p class="footer__tagline">Sabor real. Sin vueltas.</p>
+      </div>
+      <div class="footer__social">
+        <h3 class="footer__heading">Seguinos</h3>
+        <ul class="social-list">
+          <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">Instagram</a></li>
+          <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">X</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h3 class="footer__heading">Contacto</h3>
+        <p>info@ricosburger.com</p>
+        <p>+54 11 2345-6789</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; <span id="year"></span> Ricos Burger. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Panel carrito -->
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle">
+    <div class="cart-drawer__head">
+      <h2 id="cartTitle" class="cart-drawer__title">Tu carrito</h2>
+      <button type="button" class="cart-drawer__close" id="cartClose" aria-label="Cerrar carrito">&times;</button>
+    </div>
+    <div class="cart-drawer__body">
+      <ul class="cart-list" id="cartList"></ul>
+      <p class="cart-empty" id="cartEmpty">Tu carrito está vacío. ¡Agregá una burger!</p>
+    </div>
+    <div class="cart-drawer__footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">$0</strong>
+      </div>
+      <button type="button" class="btn btn--primary btn--block" id="checkoutBtn" disabled>Finalizar pedido</button>
+    </div>
+  </aside>
+
+  <!-- Modal detalle producto -->
+  <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__content">
+      <button type="button" class="modal__close" id="modalClose" aria-label="Cerrar">&times;</button>
+      <div class="modal__inner" id="modalInner"></div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
